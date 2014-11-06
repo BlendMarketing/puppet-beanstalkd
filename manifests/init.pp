@@ -40,7 +40,7 @@ class beanstalkd(
 ) {
 
   case $::operatingsystem {
-    debian: {
+    'debian', 'ubuntu': {
       $config_file      = '/etc/default/beanstalkd'
       $config_template  = 'config.debian.erb'
       $user             = 'beanstalkd'
